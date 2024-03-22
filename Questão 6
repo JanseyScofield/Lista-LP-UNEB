@@ -1,0 +1,44 @@
+/*Faça um algoritmo que leia 3 valores v1, v2 e v3 e coloque-os em ordem crescente, de forma que contenha o menor, v2 contenha o elemento do meio 
+(nem o maior, nem o menor), e v3 contenha o maior. Escreva os valores ordenados. */
+
+#include <stdio.h>
+
+main(){
+	int v1, v2, v3, maior, meio, menor;
+	scanf("%d %d %d", &v1, &v2, &v3);
+	
+	if((v1>v2)&&(v1>v3)&&(v2>v3)){
+		maior = v1;
+		meio = v2;
+		menor = v3;
+	}
+	else if((v2>v1)&&(v2>v3)&&(v1>v3)){
+		maior = v2;
+		meio = v1;
+		menor = v3;
+	}
+	else if((v3>v1)&&(v3>v2)&&(v1>v2)){
+		maior = v3;
+		meio = v1;
+		menor = v2;
+	}
+	else if((v1>v2)&&(v1>v3)&&(v3>v2)){
+		maior = v1;
+		meio = v3;
+		menor = v2;
+	}
+	else if((v2>v1)&&(v2>v3)&&(v3>v1)){
+		maior = v2;
+		meio = v3;
+		menor = v1;
+	}
+	else {
+		maior = v3;
+		meio = v2;
+		menor = v1;
+	}
+	v1 = menor;
+	v2 = meio;
+	v3 = maior;
+	printf("v1 = %d, v2 = %d, v3 = %d", v1, v2, v3);
+}
