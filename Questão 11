@@ -4,7 +4,7 @@
 #include <math.h>
 #include <locale.h>
 
-main(){
+int main(){
 	setlocale(LC_ALL,"");
 	
 	float l1, l2, l3;
@@ -55,7 +55,7 @@ main(){
 		diferencaBC = B-C;
 	}
 	
-	if(A>(B+C) || (A<diferencaBC)){
+	if(A>(B+C) || (A<diferencaBC) || (A == 3 && (B == 2 || B == 1) && (C == 2 || C == 1))){
 		printf("-1.");
 	}
 	else{
@@ -76,4 +76,5 @@ main(){
 		}
 		printf("com  área de: %.2f", area);
 	}
+	return 0;
 }
